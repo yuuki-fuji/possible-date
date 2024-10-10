@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b9eaf7;
+  width: 300px;
+  height: auto;
+  border-radius: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 10px 0;
+}
+
+input {
+  height: 20px;
+  padding: 4px;
+}
+
+textarea {
+  padding: 4px;
+}
+
+input, textarea {
+  border: 1px solid #cecece;
+  border-radius: 7px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  background-color: #2ABCA7;
+  border-radius: 7px;
+  border: 1px solid #2ABCA7;
+  transition: .5s;
+  cursor: pointer;
+  color: #fff;
+  min-height: 30px;
+}
+
+.button:hover {
+  background-color: #b084e0;
+}
+
+#copy-to-clipboard {
+  width: 200px;
+}
+.clearButton {
+  width: 80px;
+  background-color: crimson;
+  border: 1px solid crimson;
+}
+
+.addButton {
+  width: 100px;
+}
+
+.datetime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+/* チェックボックスのトグルスイッチスタイル */
+.checkbox {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox:checked {
+  background-color: #2ABCA7;
+}
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.checkbox:checked::before {
+  transform: translateX(20px);
+}
+
+/* ラベルの調整 */
+.checkbox + label {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.check-group {
+  margin-right: 5px;
+}

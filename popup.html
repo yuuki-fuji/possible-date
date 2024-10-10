@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>かんたん日程くん</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="datetime">
+    <input type="date" id="date">
+    <div class="time">
+      <input type="time" id="start-time" value="09:00" step="1800" list="data-list"><span></span>
+      <p>〜</p>
+      <input type="time" id="end-time" value="10:00" step="1800" list="data-list">
+      <datalist id="data-list"></datalist>
+    </div>
+  </div>
+
+  <div class="flex">
+    <button id="add-time" class="button addButton">追加する</button>
+    <div class="flex check-group">
+      <input type="checkbox" id="dot-checkbox" class="checkbox" name="dot-checkbox" checked>
+      <label for="dot-checkbox">リスト形式</label>
+    </div>
+  </div>
+
+  <textarea id="output" placeholder="日程を選択してください"></textarea>
+
+  <div class="flex">
+    <button id="copy-to-clipboard" class="button">
+        <i class="fas fa-copy"></i> コピー
+    </button>
+    <button id="clear-output" class="button clearButton">
+        <i class="fas fa-trash"></i> クリア
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
